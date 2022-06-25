@@ -1,0 +1,14 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+<h1>Eliminar cotiza</h1>
+
+<p>¿Está seguro que quiere eliminar la cotiza?: {{ cotiza }}?</p>
+
+<form action="" method="POST">
+  {% csrf_token %}
+  <input type="submit" action="" value="Sí, eliminar." />
+</form>
+
+{% endblock %}

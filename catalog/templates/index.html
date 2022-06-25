@@ -1,0 +1,60 @@
+{% extends "base_generic.html" %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/styles.css' %}">
+
+
+{% block content %}
+<h1>Contacto para eventos sociales</h1>
+
+  <p>Mediante este formulario podrá obtener el presupuesto necesario para poder planificar su evento.</p>
+
+<h2>Formulario</h2>
+
+  <ul>
+    <li><strong>Fechas disponibles:</strong> {{ num_instances }}</li>
+    <li><strong>Eventos realizables por día hasta agotar stock:</strong> {{ num_instances_available }}</li>
+  </ul>
+  <form>
+    <fieldset>
+        <label>Nombre: </label>
+        <input type="text" placeholder="Primer nombre">
+        <br><br>
+        <label>Apellido: </label>
+        <input type="text" placeholder="Primer apellido">
+        <br><br>
+        <label>Email: </label>
+        <input type="email" placeholder="ejemplo@gmail.com">
+        <br><br>
+        <label>Tipo de evento solicitado: </label>
+        <select>
+            <option>- Select -</option>
+            <option>Recepción religiosa</option>
+            <option>Boda Civil</option>
+            <option>Quinceañero</option>
+            <option>Promoción/Graduación</option>
+            <option>Aniversario de casados</option>
+            <option>Brindis en iglesia</option>
+            <option>Cumpleaños</option>
+            <option>Otro evento social</option>
+        </select>
+
+        <br><br>
+        <label>Cantidad de invitados: </label>
+        <input type="number" placeholder=" ">
+        <br><br>
+        <label>Fecha del evento: </label>
+        <input type="date" placeholder="dd/mm/aaaa">
+        <br><br>
+        <label>¿Desde que sea en el interior o exterior?</label><br>
+        <input type="checkbox"> Interior<br>
+        <input type="checkbox"> Exterior<br>
+        <br><br>
+        
+        <input type="submit" value="Cotizar">
+        <input type="reset" value="Borrar formulario">
+
+    </fieldset>
+</form>
+
+
+{% endblock %}
